@@ -1,7 +1,7 @@
 // import { PLACEHOLDER } from "actions/types";
 import _ from "lodash";
 
-const initialState = { songs: [], users: [] };
+const initialState = {};
 
 export default function (state = initialState, action) {
   switch (action.type) {
