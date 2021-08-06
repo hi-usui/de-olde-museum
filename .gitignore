@@ -1,0 +1,13 @@
+.DS_Store
+.env.dev
+.env.prod
+.env.staging
+.npmrc
+.nyc_output
+.swp
+build
+data
+dump.rdb
+logs
+node_modules
+*.key

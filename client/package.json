@@ -1,0 +1,51 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "PORT=8000 react-scripts start",
+    "build": "react-scrips build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.2",
+    "classnames": "^2.2.6",
+    "http-proxy-middleware": "^2.0.1",
+    "jquery": "^3.6.0",
+    "jwt-decode": "^3.1.2",
+    "moment-timezone": "^0.5.33",
+    "query-string": "^6.14.0",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-beta.4",
+    "react-dom": "^16.14.0",
+    "react-qr-code": "^2.0.0",
+    "react-qr-scanner": "^1.0.0-alpha.7",
+    "react-redux": "^7.2.2",
+    "react-redux-actions-hook": "^1.1.16",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^2.0.2",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.2.1",
+    "prettier-plugin-sort-json": "^0.0.2"
+  }
+}
