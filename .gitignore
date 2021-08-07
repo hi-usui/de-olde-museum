@@ -10,4 +10,5 @@ data
 dump.rdb
 logs
 node_modules
+package-lock.json
 *.key
