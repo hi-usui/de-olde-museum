@@ -2,12 +2,18 @@ import mongoose from "mongoose";
 
 const ArtSchema = new mongoose.Schema(
   {
-    name: {
+    title: {
       type: String,
-      default: "Untitled Artpiece",
+      required: true,
     },
     artist: {
       type: String,
+      required: true,
+    },
+    img: {
+      contentType: { type: String, required: true },
+      data: { type: Buffer, required: true },
+      filename: { type: String, required: true },
     },
   },
   { timestamps: { createdAt: "_created", updatedAt: "_updated" } }

@@ -1,4 +1,4 @@
-// import { PLACEHOLDER } from "actions/types";
+import { ART_ADD } from "actions/_index";
 import _ from "lodash";
 
 const initialState = {};

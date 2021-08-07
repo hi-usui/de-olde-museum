@@ -1,5 +1,9 @@
 import { combineReducers } from "redux";
 
+import art from "./art";
+import cart from "./cart";
+
 export default combineReducers({
-  // placeholder: placeholderReducer
+  art,
+  cart,
 });

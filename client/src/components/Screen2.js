@@ -1,5 +1,5 @@
 import React from "react";
 
 export default () => {
-  return <div></div>;
+  return <div className="Screen__2">Screen2</div>;
 };

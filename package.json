@@ -39,7 +39,9 @@
     "path": "^0.12.7",
     "redis": "^3.1.2",
     "rollup": "^2.45.2",
+    "smart-truncate": "^1.0.1",
     "socket.io": "^4.1.3",
+    "terminal-art": "^1.3.1",
     "terser": "^5.6.1",
     "util": "^0.10.4"
   },
