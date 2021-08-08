@@ -5,6 +5,7 @@ export default () => {
   const navigate = useNavigate();
   return (
     <div className="Landing">
+      <h1 style={{ color: "black" }}>test</h1>
       Don't worry about the backgroundColor, we will change it later
       <div>
         <button onClick={() => navigate("/workflow/screen1")}>SCREEN 1</button>

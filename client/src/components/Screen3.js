@@ -5,9 +5,8 @@ import QRCode from "react-qr-code";
 
 export default () => {
   return (
-    <div className="Screen__3">
-      SCREEN 3
-      <QRCode value={`${new URL("/", window.location.href)}`} size={300} />
+    <div className="screen">
+      <h1>Your suggested outfits</h1>
     </div>
   );
 };

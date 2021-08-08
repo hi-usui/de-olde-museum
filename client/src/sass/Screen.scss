@@ -1,18 +1,69 @@
 .ScreenContainer {
-  background-color: yellow;
+  height: 100vh;
+  padding: 5vh;
+  > header {
+    > #logo {
+      font-size: 3vh;
+      line-height: 3vh;
+      color: $color-teal;
+      text-align: left;
+      float: left;
+      p {
+        font-weight: 300;
+      }
+    }
+    button {
+      display: block;
+      float: right;
+      font-size: 3vh;
+      line-height: 3vh;
+      height: 7.25vh;
+      width: 16vh;
+      font-weight: 300;
+      padding: 2vh;
+      padding-bottom: 2.25vh;
+      color: $color-teal;
+      border: 1.5px $color-teal solid;
+      border-radius: 1vh;
+      background-color: transparent;
+    }
+  }
+  > footer {
+    position: absolute;
+    bottom: 5vh;
+    width: calc(100% - 35vh);
+    button {
+      display: block;
+      position: relative;
+      font-size: 3vh;
+      line-height: 3vh;
+      height: 7.25vh;
+      width: 16vh;
+      font-weight: 300;
+      padding: 2vh;
+      padding-bottom: 2.25vh;
+      border-radius: 1vh;
+      border: 1.5px $color-teal solid;
+    }
+    #back {
+      color: $color-teal;
+      background-color: transparent;
+      float: left;
+    }
+    #next {
+      color: white;
+      background-color: $color-teal;
+      float: right;
+    }
+  }
 }
-
-.Screen {
-  &__1 {
-    background-color: blue;
-  }
-  &__2 {
-    background-color: green;
-  }
-  &__3 {
-    background-color: orange;
-  }
-  &__4 {
-    background-color: gold;
+.screen {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  > h1 {
+    font-size: 6vh;
+    line-height: 16vh;
+    color: $color-dark-teal;
   }
 }

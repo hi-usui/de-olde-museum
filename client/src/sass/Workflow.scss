@@ -1,9 +1,8 @@
 .Workflow {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 0fr 5fr;
 }
 
 .Workflow__Box {
   align-self: center;
-  font-size: 10rem;
 }

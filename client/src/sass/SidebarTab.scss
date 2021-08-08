@@ -1,0 +1,16 @@
+.SidebarTab {
+  background-color: $color-light-beige;
+  color: $color-beige;
+  border-bottom: 1px white solid;
+  height: 25vh;
+  width: 25vh;
+  padding: 4vh;
+  > h1 {
+    font-size: 7vh;
+    line-height: 9vh;
+  }
+  > h2 {
+    font-size: 4vh;
+    line-height: 4vh;
+  }
+}
