@@ -13,4 +13,8 @@
     font-size: 4vh;
     line-height: 4vh;
   }
+  &.active {
+    background-color: teal;
+    color: $color-grey-light-1;
+  }
 }

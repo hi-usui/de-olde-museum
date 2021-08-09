@@ -1,5 +1,13 @@
 .Landing {
-  background-color: $color-grey-dark-1;
-  color: $color-grey-light-1;
-  font-size: 6rem;
+  padding: 5vh;
+}
+#logo {
+  font-size: 3vh;
+  line-height: 3vh;
+  color: $color-teal;
+  text-align: right;
+  float: right;
+  p {
+    font-weight: 300;
+  }
 }

@@ -2,10 +2,10 @@ import { combineReducers } from "redux";
 
 import art from "./art";
 import cart from "./cart";
-import navigator from "./navigator";
+import page from "./page";
 
 export default combineReducers({
   art,
   cart,
-  navigator,
+  page,
 });

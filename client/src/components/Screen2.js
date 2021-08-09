@@ -1,11 +1,12 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { PAGE_SET } from "actions/_index";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 export default () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const page = useSelector((state) => state.navigator);
+  useEffect(() => {
+    dispatch({ type: PAGE_SET, payload: 2 });
+  }, []);
 
   return (
     <div className="screen">

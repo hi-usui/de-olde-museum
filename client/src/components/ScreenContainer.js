@@ -2,18 +2,12 @@ import Screen1 from "components/Screen1";
 import Screen2 from "components/Screen2";
 import Screen3 from "components/Screen3";
 import Screen4 from "components/Screen4";
-import { navigatorNext } from "helpers/_index";
-import React, { useEffect } from "react";
-import { useDispatch, useSelector, useState } from "react-redux";
+import React from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 export default () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const location = useLocation();
-  const page = useSelector((state) => state.navigator);
-
-  useEffect(() => {}, [page]);
 
   const foot = () => {
     switch (location.pathname.split("/").slice(-1)[0]) {
@@ -23,7 +17,7 @@ export default () => {
             <button
               id="back"
               onClick={() => {
-                navigate("/workflow/screen1");
+                navigate("/");
               }}
             >
               {`<`} {`Back`}

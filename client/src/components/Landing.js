@@ -1,24 +1,24 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { PAGE_SET } from "actions/_index";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 export default () => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({ type: PAGE_SET, payload: 0 });
+  }, []);
   return (
     <div className="Landing">
-      <h1 style={{ color: "black" }}>test</h1>
-      Don't worry about the backgroundColor, we will change it later
-      <div>
-        <button onClick={() => navigate("/workflow/screen1")}>SCREEN 1</button>
+      <div id="logo">
+        <p>
+          <strong>De Olde \</strong>
+        </p>
+        <p>
+          <strong>\ Legion of Dishonor</strong>
+        </p>
+        <p>museum store</p>
       </div>
-      <div>
-        <button onClick={() => navigate("/workflow/screen2")}>SCREEN 2</button>
-      </div>
-      <div>
-        <button onClick={() => navigate("/workflow/screen3")}>SCREEN 3</button>
-      </div>
-      <div>
-        <button onClick={() => navigate("/workflow/screen4")}>SCREEN 4</button>
-      </div>
+      <h3>Find an outfit inspired by your favorite artwork!</h3>
     </div>
   );
 };
