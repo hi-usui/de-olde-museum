@@ -1,7 +1,28 @@
 .Landing {
   padding: 5vh;
+  padding-left: 10vh;
+  height: 100vh;
+  background-image: url("../assets/img/Harry.png");
+  background-size: cover;
+  background-position: bottom;
+  > button {
+    background-color: $color-teal;
+    color: white;
+    width: 30vh;
+    height: 15vh;
+    text-align: center;
+    font-size: 6vh;
+    line-height: 5vh;
+    padding: 2.5vh;
+    outline: none;
+    border: none;
+    border-radius: 1.5vh;
+    display: block;
+    font-weight: 300;
+    margin: 4vh 0;
+  }
 }
-#logo {
+#rightlogo {
   font-size: 3vh;
   line-height: 3vh;
   color: $color-teal;
@@ -9,5 +30,26 @@
   float: right;
   p {
     font-weight: 300;
+  }
+  margin-bottom: 15vh;
+}
+h3 {
+  font-size: 6vh;
+  line-height: 7vh;
+  font-weight: 300;
+  clear: both;
+  color: $color-dark-teal;
+}
+.landingStep {
+  color: $color-dark-teal;
+  float: left;
+  width: 17.5vh;
+  > h1 {
+    font-size: 7vh;
+    line-height: 9vh;
+  }
+  > h2 {
+    font-size: 4vh;
+    line-height: 4.5vh;
   }
 }
