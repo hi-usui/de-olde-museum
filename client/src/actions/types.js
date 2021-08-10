@@ -1,6 +1,9 @@
 export const ART_ADD = "ART_ADD";
+export const ART_PREVIEW = "ART_PREVIEW";
+export const ART_SCROLL_LEFT = "ART_SCROLL_LEFT";
 export const ARTIST_SET = "ARTIST_SET";
 export const CART_ADD = "CART_ADD";
 export const PAGE_SET = "PAGE_SET";
 export const ERRORS_CLEAR = "ERRORS_CLEAR";
 export const ERRORS_GET = "ERRORS_GET";
+export const USER_COLOR_SET = "USER_COLOR_SET";

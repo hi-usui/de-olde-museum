@@ -1,19 +1,56 @@
-.Gallery {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  &__artworks {
-    display: grid;
-    grid-column-gap: 1rem;
-    grid-row-gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    &__artbox {
-      background-color: $color-teal;
-      color: $color-grey-dark-1;
-      cursor: pointer;
-      display: grid;
-      font-size: 2.5em;
-      justify-items: center;
-      text-align: center;
+.gallery {
+  width: calc(99vw - 36vh);
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  .page {
+    display: inline-block;
+    width: calc(99vw - 36vh);
+    height: 67.25vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    text-align: center;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    .artworks {
+      width: calc(60vw + 15vh);
+      height: calc(40vw + 10vh);
+      margin: 0 auto;
+      .artbox {
+        cursor: pointer;
+        float: left;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        width: 20vw;
+        height: 20vw;
+        margin: 2.5vh;
+        .prompt-container {
+          background-color: rgba(255, 255, 255, 0.8);
+          color: $color-dark-teal;
+          height: 20vw;
+          width: 20vw;
+          padding: 2vw;
+          position: relative;
+          h1 {
+            width: 16vw;
+            white-space: pre-line;
+            font-size: 2.5vw;
+            line-height: 2.5vw;
+            margin-top: 3vw;
+            margin-bottom: 0.25vw;
+            font-weight: 300;
+          }
+          h2 {
+            width: 16vw;
+            white-space: pre-line;
+            font-size: 1.5vw;
+            line-height: 1.75vw;
+          }
+        }
+      }
     }
   }
 }

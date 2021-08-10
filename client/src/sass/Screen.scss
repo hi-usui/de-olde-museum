@@ -8,8 +8,13 @@
       color: $color-teal;
       text-align: left;
       float: left;
+      user-select: none;
+      cursor: default;
       p {
         font-weight: 300;
+        > strong {
+          font-weight: 600;
+        }
       }
     }
     button {
@@ -63,7 +68,9 @@
   text-align: center;
   > h1 {
     font-size: 6vh;
-    line-height: 16vh;
+    line-height: 6vh;
     color: $color-dark-teal;
+    margin: 0;
+    padding: 5vh 0 3vh 0;
   }
 }

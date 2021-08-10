@@ -1,30 +1,74 @@
-import React from "react";
+import { ART_SCROLL_LEFT } from "actions/_index";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+// https://dev.to/fredericrous/minimal-carousel-with-scroll-snap-mobile-mouse-friendly-1dl
+
+// TODO:
+// Move to artist page on click
 
 export default () => {
-  // const gra = function (min, max) {
-  //   return Math.random() * (max - min) + min;
-  // };
-  // const gri = function (min, max) {
-  //   return Math.floor(Math.random() * (max - min + 1)) + min;
-  // };
-  // const init = function () {
-  //   let items = document.querySelectorAll("ul li");
-  //   for (let i = 0; i < items.length; i++) {
-  //     items[i].style.minWidth = gra(30, 60) + "vw";
-  //     items[i].style.background = randomColor({ luminosity: "light" });
-  //   }
-  //   // cssScrollSnapPolyfill();
-  // };
-  // init();
+  const dispatch = useDispatch();
+  const artistPos = useSelector((state) => state.art.scrollLeft);
+
+  useEffect(() => {
+    const slider = document.querySelector(".scroll-container");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    if (artistPos) slider.scrollLeft = artistPos;
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slider.classList.add("active");
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener("mouseleave", (_) => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+    slider.addEventListener("mouseup", (_) => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+    slider.addEventListener("mousemove", (e) => {
+      e.preventDefault();
+      if (!isDown) return;
+      const x = e.pageX - slider.offsetLeft;
+      const SCROLL_SPEED = 2;
+      const walk = (x - startX) * SCROLL_SPEED;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+    slider.addEventListener("scroll", (e) => {
+      dispatch({ type: ART_SCROLL_LEFT, payload: e.target.scrollLeft });
+    });
+  }, []);
+
   return (
-    <nav>
-      <ul>
-        <li>Monet</li>
-        <li>O'Keeffe</li>
-        <li>Picasso</li>
-        <li>Warhol</li>
-        <li>Van Gogh</li>
-      </ul>
-    </nav>
+    <div className="scroll-master">
+      <div className="scroll-overlay"></div>
+      {/* <ScrollContainer
+        className="scroll-container"
+        vertical={false}
+        horizontal={true}
+      >
+        <div></div>
+        <div>Monet</div>
+        <div>O'Keeffe</div>
+        <div>Picasso</div>
+        <div>Warhol</div>
+        <div>Van Gogh</div>
+        <div></div>
+      </ScrollContainer> */}
+      <div className="scroll-container">
+        <div></div>
+        <div className="artist">Monet</div>
+        <div className="artist">O'Keeffe</div>
+        <div className="artist">Picasso</div>
+        <div className="artist">Van Gogh</div>
+        <div className="artist">Warhol</div>
+        <div></div>
+      </div>
+    </div>
   );
 };

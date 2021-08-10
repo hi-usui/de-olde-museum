@@ -12,26 +12,7 @@ export default () => {
   const foot = () => {
     switch (location.pathname.split("/").slice(-1)[0]) {
       case "screen1":
-        return (
-          <footer>
-            <button
-              id="back"
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              {`<`} {`Back`}
-            </button>
-            <button
-              id="next"
-              onClick={() => {
-                navigate("/workflow/screen2");
-              }}
-            >
-              {`Next >`}
-            </button>
-          </footer>
-        );
+        return null;
       case "screen2":
         return (
           <footer>

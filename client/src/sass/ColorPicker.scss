@@ -1,0 +1,17 @@
+.ColorPicker {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: center;
+  grid-column-gap: 1rem;
+  &__artContainer {
+    // height: 100%;
+    // width: 100%;
+  }
+  &__art {
+    // height: 100%;
+    // width: 100%;
+  }
+  &__color {
+    max-width: 5rem;
+  }
+}

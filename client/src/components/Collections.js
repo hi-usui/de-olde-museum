@@ -6,6 +6,7 @@ export default () => {
   return (
     <div style={{ color: "white" }}>
       <Artists />
+      <div id="focus-line"></div>
       <Gallery />
     </div>
   );
