@@ -39,7 +39,7 @@
             white-space: pre-line;
             font-size: 2.5vw;
             line-height: 2.5vw;
-            margin-top: 3vw;
+            margin-top: 2vw;
             margin-bottom: 0.25vw;
             font-weight: 300;
           }
@@ -48,6 +48,28 @@
             white-space: pre-line;
             font-size: 1.5vw;
             line-height: 1.75vw;
+          }
+          .prompt-options {
+            position: absolute;
+            width: 16vw;
+            top: 11vw;
+            button {
+              position: relative;
+              margin: 0;
+              padding: 0;
+              height: 5vw;
+              width: 5vw;
+              border-radius: 50%;
+              border: 1.5px solid $color-dark-teal;
+              font-family: "Roboto";
+            }
+            #unselect {
+              background-color: transparent;
+              margin-right: 1vw;
+            }
+            #select {
+              background-color: $color-dark-teal;
+            }
           }
         }
       }

@@ -11,7 +11,7 @@ export default [
         filepath: "monet1.jpg",
         neutralGarment: "#BBB4F5",
         neutralShoes: "#C5C5C7",
-        title: "Water Lilies",
+        title: "Water Lilies I",
       },
       {
         femmeGarment: "#8BB6BC",
@@ -35,7 +35,7 @@ export default [
         filepath: "monet4.jpg",
         neutralGarment: "#C4DFDD",
         neutralShoes: "#C5C5C7",
-        title: "Water Lilies",
+        title: "Water Lilies II",
       },
       {
         femmeGarment: "#8DB6E4",
@@ -239,7 +239,7 @@ export default [
         filepath: "warhol3.jpg",
         neutralGarment: "#FF800B",
         neutralShoes: "#F9F9F9",
-        title: "Campbell's Soup Cans",
+        title: "Cantaloupes II",
       },
       {
         femmeGarment: "#BF142D",
@@ -247,7 +247,7 @@ export default [
         filepath: "warhol4.jpg",
         neutralGarment: "#DB6060",
         neutralShoes: "#C5C5C7",
-        title: "Skull",
+        title: "Campbell's Soup Cans",
       },
       {
         femmeGarment: "#273B4E",
@@ -255,7 +255,7 @@ export default [
         filepath: "warhol5.jpg",
         neutralGarment: "#3E5A83",
         neutralShoes: "#C5C5C7",
-        title: "Cantaloupes II",
+        title: "Skull",
       },
       {
         femmeGarment: "#CB5C37",
