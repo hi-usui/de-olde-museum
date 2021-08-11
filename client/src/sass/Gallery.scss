@@ -62,6 +62,13 @@
               border-radius: 50%;
               border: 1.5px solid $color-dark-teal;
               font-family: "Roboto";
+              cursor: pointer;
+              svg {
+                cursor: pointer;
+                line {
+                  cursor: pointer;
+                }
+              }
             }
             #unselect {
               background-color: transparent;

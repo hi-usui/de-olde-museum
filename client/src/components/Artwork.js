@@ -6,18 +6,27 @@ import { useNavigate } from "react-router-dom";
 // TO-DO: (Wishlist) If an artpiece is in focus and user clicks outside, unfocus
 
 export default (props) => {
-  const { artist, src, title } = props;
+  const { artist, src, title, ...rest } = props;
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [click, setClick] = useState(false);
 
-  const accept = () => {
+  const accept = async () => {
+    const img = new Image();
+    img.src = URL.createObjectURL(await (await fetch(src)).blob());
+    await img.decode();
     dispatch({
       type: ART_PREVIEW,
       payload: {
         artist,
         src,
         title,
+        width: img.width,
+        height: img.height,
+        femmeGarment: rest.femmeGarment,
+        femmeShoes: rest.femmeShoes,
+        neutralGarment: rest.neutralGarment,
+        neutralShoes: rest.neutralShoes,
       },
     });
     navigate("/workflow/screen2");
@@ -59,8 +68,8 @@ export default (props) => {
                   y1="15"
                   y2="35"
                   stroke="#314243"
-                  stroke-width="1.5px"
-                  vector-effect="non-scaling-stroke"
+                  strokeWidth="1.5px"
+                  vectorEffect="non-scaling-stroke"
                 />
                 <line
                   x1="35"
@@ -68,8 +77,8 @@ export default (props) => {
                   y1="15"
                   y2="35"
                   stroke="#314243"
-                  stroke-width="1.5px"
-                  vector-effect="non-scaling-stroke"
+                  strokeWidth="1.5px"
+                  vectorEffect="non-scaling-stroke"
                 />
               </svg>
             </button>
@@ -81,9 +90,9 @@ export default (props) => {
                   y1="26.25"
                   y2="33.75"
                   stroke="white"
-                  stroke-width="1.5px"
-                  vector-effect="non-scaling-stroke"
-                  stroke-linecap="round"
+                  strokeWidth="1.5px"
+                  vectorEffect="non-scaling-stroke"
+                  strokeLinecap="round"
                 />
                 <line
                   x1="37.5"
@@ -91,9 +100,9 @@ export default (props) => {
                   y1="16.25"
                   y2="33.75"
                   stroke="white"
-                  stroke-width="1.5px"
-                  vector-effect="non-scaling-stroke"
-                  stroke-linecap="round"
+                  strokeWidth="1.5px"
+                  vectorEffect="non-scaling-stroke"
+                  strokeLinecap="round"
                 />
               </svg>
             </button>

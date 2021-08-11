@@ -1,5 +1,6 @@
 import { PAGE_SET } from "actions/_index";
-import Canvas from "components/Canvas";
+import ColorPicker from "components/ColorPicker";
+import ColorPreview from "components/ColorPreview";
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -8,32 +9,49 @@ import { useDispatch, useSelector } from "react-redux";
 // https://medium.com/@pdx.lucasm/canvas-with-react-js-32e133c05258
 export default () => {
   const dispatch = useDispatch();
-  const userColor = useSelector((state) => state.colors.user);
+  const user = useSelector((state) => state.colors.user);
+  const preview = useSelector((state) => state.art.preview);
+  const pickerRef = useRef();
 
   useEffect(() => {
     dispatch({ type: PAGE_SET, payload: 2 });
   }, []);
 
-  return (
-    <div className="screen">
-      <h1>Tap inside painting to select color</h1>
-      <div className="ColorPicker">
-        <div className="ColorPicker__artContainer">
-          <Canvas
-            className="ColorPicker__art"
-            height={600}
-            width={1200}
-            dispatch={dispatch}
-          />
+  const renderPicker = () => {
+    if (!preview.src) {
+      return (
+        <div className="screen">
+          <h1>Please return to step 1 and select a painting</h1>
         </div>
-        <div className="ColorPicker__color">
-          <div style={{ backgroundColor: userColor }}>
-            <br />
+      );
+    } else {
+      return (
+        <div className="screen">
+          <h1>Tap inside painting to select color</h1>
+          <div className="picker-container">
+            <ColorPicker
+              canvasRef={pickerRef}
+              width={preview.width}
+              height={preview.height}
+            />
+            <div className="bar" style={{ backgroundColor: user.color }}></div>
+            {/* <div className="ColorPreview">
+              <div className="ColorPreview__color">
+                <div
+                  className="bar"
+                  style={{ backgroundColor: user.color }}
+                ></div>
+              </div>
+              <ColorPreview pickerref={pickerRef} />
+            </div> */}
           </div>
-          <div>{userColor}</div>
+          <h2 className="subtitle">
+            We will build your outfit's palette around the color you select.
+          </h2>
         </div>
-      </div>
-      <h2>The color you select will determine your outfit's palette</h2>
-    </div>
-  );
+      );
+    }
+  };
+
+  return renderPicker();
 };

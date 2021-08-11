@@ -1,5 +1,5 @@
-import artists from "artists";
 import Artwork from "components/Artwork";
+import { artists } from "config";
 import _ from "lodash";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -11,11 +11,21 @@ const renderArtworks = (artist) => {
   for (let artwork of artworks) {
     const path = req(`./${artwork.filepath}`).default;
     jsx.push(
-      <Artwork key={path} src={path} artist={artist} title={artwork.title} />
+      <Artwork
+        key={path}
+        src={path}
+        artist={artist}
+        title={artwork.title}
+        femmeGarment={artwork.femmeGarment}
+        femmeShoes={artwork.femmeShoes}
+        neutralGarment={artwork.neutralGarment}
+        neutralShoes={artwork.neutralShoes}
+      />
     );
   }
   return jsx;
 };
+
 export default () => {
   const artistPos = useSelector((state) => state.art.scrollLeft);
   useEffect(() => {
@@ -35,7 +45,7 @@ export default () => {
         <div className="artworks">{renderArtworks("Picasso")}</div>
       </div>
       <div className="page">
-        <div className="artworks">{renderArtworks("Van Gogh")}</div>
+        a<div className="artworks">{renderArtworks("Van Gogh")}</div>
       </div>
       <div className="page">
         <div className="artworks">{renderArtworks("Warhol")}</div>

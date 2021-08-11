@@ -1,0 +1,50 @@
+.suggestedBody {
+  height: 45vh;
+  margin: 0 auto;
+  margin-top: 2.5vh;
+  margin-bottom: 5vh;
+  width: fit-content;
+  div {
+    text-align: center;
+  }
+  .neutral {
+    float: left;
+  }
+  .femme {
+    float: left;
+  }
+  img {
+    display: inline-block;
+  }
+  .tentall {
+    height: 10vh;
+    img {
+      height: 10vh;
+    }
+  }
+  .fifteentall {
+    height: 15vh;
+    img {
+      height: 15vh;
+    }
+  }
+  .twentyfivetall {
+    height: 25vh;
+    .dressRow2Col1 {
+      float: left;
+      img {
+        height: 25vh;
+      }
+    }
+    .dressRow2Col2 {
+      float: left;
+      .purse {
+        height: 17.5vh;
+      }
+      .fShoes {
+        height: 7.5vh;
+        display: block;
+      }
+    }
+  }
+}

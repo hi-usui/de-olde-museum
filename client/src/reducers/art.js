@@ -1,7 +1,7 @@
 import { ART_PREVIEW, ART_SCROLL_LEFT } from "actions/_index";
 import _ from "lodash";
 
-const initialState = { scrollLeft: 0 };
+const initialState = { scrollLeft: 0, preview: {} };
 
 export default function (state = initialState, action) {
   switch (action.type) {
