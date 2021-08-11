@@ -16,6 +16,17 @@
   img {
     display: inline-block;
   }
+  .dressRow1 {
+    position: relative;
+    .sunhat {
+      position: absolute;
+      z-index: 1;
+    }
+    .ribbon {
+      position: absolute;
+      z-index: 2;
+    }
+  }
   .tentall {
     height: 10vh;
     img {
