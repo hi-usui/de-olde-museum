@@ -440,7 +440,7 @@ export const clothes = {
           },
           {
             color: "#AEA183",
-            filepath: "femme-static/khaki.png",
+            filepath: "femme-static/khakiskirt.png",
           },
         ],
       },

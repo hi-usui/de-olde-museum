@@ -82,6 +82,9 @@ export default () => {
         neutralGarment,
       ]);
       if (foundNeutralGarmentPants) {
+        nGarmentUrl = clothesReq(
+          `./${foundNeutralGarmentPants.filepath}`
+        ).default;
       } else if (foundNeutralGarmentJacket) {
         nGarmentUrl = clothesReq(
           `./${foundNeutralGarmentJacket.filepath}`
@@ -103,19 +106,24 @@ export default () => {
 
       const renderNeutralGarment = () => {
         if (foundNeutralGarmentPants) {
-          <div className="pantsLayout">
-            <div className="pantsRow1 tentall">
-              <img src={neutralDynamicUrls.cap} className="cap" />
+          return (
+            <div className="pantsLayout">
+              <div className="pantsRow1 tentall">
+                <img src={neutralDynamicUrls.cap} className="cap" />
+              </div>
+              <div className="pantsRow2 fifteentall">
+                <img
+                  src={neutralDynamicUrls.sweatshirt}
+                  className="sweatshirt"
+                />
+                <img src={neutralDynamicUrls.tshirt} className="tshirt" />
+              </div>
+              <div className="pantsRow3 tentall">
+                <img src={nGarmentUrl} className="pants" />
+                <img src={nShoesUrl} className="nShoes" />
+              </div>
             </div>
-            <div className="pantsRow2 fifteentall">
-              <img src={neutralDynamicUrls.sweatshirt} className="sweatshirt" />
-              <img src={neutralDynamicUrls.tshirt} className="tshirt" />
-            </div>
-            <div className="pantsRow3 tentall">
-              <img src={nGarmentUrl} className="pants" />
-              <img src={nShoesUrl} className="nShoes" />
-            </div>
-          </div>;
+          );
         } else if (foundNeutralGarmentJacket) {
           return (
             <div className="jacketLayout">
