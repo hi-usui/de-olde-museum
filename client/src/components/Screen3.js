@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 // https://css-tricks.com/converting-color-spaces-in-javascript/
 function hexToHSL(H) {
+  if (!H) return;
   // Convert hex to RGB first
   let r = 0,
     g = 0,
@@ -56,7 +57,7 @@ export default () => {
 
   const painting = useSelector((state) => state.art.preview);
   const { neutralGarment, neutralShoes, femmeGarment, femmeShoes } = painting;
-  const userColor = hextoHSL(useSelector((state) => state.colors.user.color));
+  const userColor = hexToHSL(useSelector((state) => state.colors.user.color));
 
   const clothesReq = require.context("assets/clothes", true, /^\.\/.*\.png$/);
 
