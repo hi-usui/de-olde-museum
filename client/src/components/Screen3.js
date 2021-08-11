@@ -2,11 +2,7 @@ import { PAGE_SET } from "actions/_index";
 import { clothes } from "config";
 import _ from "lodash";
 import React, { useEffect } from "react";
-import QRCode from "react-qr-code";
 import { useDispatch, useSelector } from "react-redux";
-import art from "reducers/art";
-
-// TO-DO Make the QR Code show up only after clicking "Finish"
 
 export default () => {
   const preview = useSelector((state) => state.art.preview);
@@ -18,9 +14,6 @@ export default () => {
   const painting = useSelector((state) => state.art.preview);
   const { neutralGarment, neutralShoes, femmeGarment, femmeShoes } = painting;
   const userColor = useSelector((state) => state.colors.user.color);
-  // const nspiece = the "piece" attribute of the item that has the hardcoded neutral garment color
-  // const fspiece = the "piece" attribute of the item that has the hardcoded femme garment color
-
   const clothesReq = require.context("assets/clothes", true, /^\.\/.*\.png$/);
 
   const {
