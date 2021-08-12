@@ -1,6 +1,7 @@
 .ScreenContainer {
   height: 100vh;
   padding: 5vh;
+  overflow: hidden;
   > header {
     > .logo {
       font-size: 3vh;
