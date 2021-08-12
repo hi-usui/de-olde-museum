@@ -9,6 +9,7 @@ export default () => {
   const outfit = JSON.parse(
     Buffer.from(useQuery().get("outfit"), "base64").toString()
   );
+  console.log(`DEBUG: ${JSON.stringify(outfit, null, 4)}`);
   // const outfit = JSON.parse(Buffer.from(EXAMPLE_PAYLOAD, "base64").toString());
   const { neutral, femme } = outfit.details;
   const renderFemmeClothes = () =>
@@ -17,11 +18,18 @@ export default () => {
         return (
           <div key={cloth.src} className="cloth ssunhat">
             <img src={cloth.src} style={cloth.style} />
+            <div>Aisle {cloth.aisle}</div>
           </div>
         );
       } else if (index == 1) {
         return (
           <div key={cloth.src} className="cloth sribbon">
+            <img src={cloth.src} style={cloth.style} />
+          </div>
+        );
+      } else if (index == 2) {
+        return (
+          <div key={cloth.src} className="cloth sgarment">
             <img src={cloth.src} style={cloth.style} />
             <div>Aisle {cloth.aisle}</div>
           </div>
@@ -47,7 +55,7 @@ export default () => {
   return (
     <div className="Phone">
       <header>
-        <div id="logo">
+        <div className="logo">
           <p>
             <strong>De Olde \</strong>
           </p>
@@ -57,11 +65,12 @@ export default () => {
           <p>museum store</p>
         </div>
       </header>
-      <div>
-        <img src={outfit.art} height={100} />
-      </div>
-      <div>{renderNeutralClothes()}</div>
-      <div>{renderFemmeClothes()}</div>
+      <div
+        style={{ backgroundImage: `url("${outfit.art}")` }}
+        className="phone-painting"
+      ></div>
+      <div className="phone-neutral">{renderNeutralClothes()}</div>
+      <div className="phone-femme">{renderFemmeClothes()}</div>
     </div>
   );
 };

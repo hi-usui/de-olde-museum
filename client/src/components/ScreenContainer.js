@@ -85,7 +85,7 @@ export default () => {
   return (
     <div className="ScreenContainer">
       <header>
-        <div id="logo">
+        <div className="logo">
           <p>
             <strong>De Olde \</strong>
           </p>
