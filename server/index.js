@@ -27,4 +27,4 @@ app.use(async (err, req, res, next) => {
   return res.status(500).json({ error: err.stack });
 });
 
-await import("./sample-data.js");
+// await import("./sample-data.js");

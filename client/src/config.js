@@ -22,7 +22,7 @@ export const artists = [
         femmeGarment: "#C099A1",
         femmeShoes: "#AEA183",
         filepath: "monet3.jpg",
-        neutralGarment: "#D62424",
+        neutralGarment: "#DB6060",
         neutralShoes: "#E8D39E",
         title: "Jeune fille dans le jardin de Giverny",
       },
@@ -272,11 +272,11 @@ export const clothes = {
       shoes: [
         {
           color: "#806150",
-          filepath: "neutral-static/brownloafers.png",
+          filepath: "neutral-static/brownshoes.png",
         },
         {
           color: "#E8D39E",
-          filepath: "neutral-static/beigeslides.png",
+          filepath: "neutral-static/beigevans.png",
         },
         {
           color: "#F7F2DB",

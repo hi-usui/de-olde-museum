@@ -1,13 +1,16 @@
+import { QUIT } from "actions/_index";
 import Screen1 from "components/Screen1";
 import Screen2 from "components/Screen2";
 import Screen3 from "components/Screen3";
 import Screen4 from "components/Screen4";
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 export default () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
 
   const foot = () => {
     switch (location.pathname.split("/").slice(-1)[0]) {
@@ -94,6 +97,7 @@ export default () => {
         <button
           onClick={() => {
             navigate("/");
+            dispatch({ type: QUIT });
           }}
         >
           Quit

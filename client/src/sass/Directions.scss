@@ -1,0 +1,72 @@
+.dirBody {
+  height: 52.5vh;
+  margin: 0 auto;
+  margin-top: 2.5vh;
+  width: fit-content;
+  > div {
+    float: left;
+  }
+  .cloth {
+    display: block;
+    overflow: auto;
+    width: 22vh;
+    margin-bottom: 1vh;
+    position: relative;
+    > img {
+      display: block;
+      width: 9vh;
+      height: auto;
+    }
+    > div {
+      margin-left: 2.5vh;
+      font-size: 3vh;
+      line-height: 0;
+      font-family: "Roboto";
+      color: $color-dark-teal;
+      font-weight: 300;
+      position: absolute;
+      left: 9vh;
+      top: 50%;
+    }
+  }
+  .dbCol1 {
+    > h2 {
+      color: $color-dark-teal;
+      font-size: 3vh;
+      line-height: 3.5vh;
+      width: 300px;
+      margin-top: 1.5vh;
+    }
+  }
+  .dbCol2 {
+    margin-left: 8vh;
+  }
+  .dbCol3 {
+    margin-left: 8vh;
+    position: relative;
+    .ssunhat {
+      height: 4vh;
+      width: 23vh;
+      position: absolute;
+      left: -1vh;
+      > img {
+        width: 10vh;
+      }
+      > div {
+        margin-left: 3.5vh;
+      }
+    }
+    .sribbon {
+      height: 4vh;
+      width: 23vh;
+      position: absolute;
+      left: -1vh;
+      > img {
+        width: 10vh;
+      }
+    }
+    .sgarment {
+      margin-top: 5vh;
+    }
+  }
+}

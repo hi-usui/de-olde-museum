@@ -1,0 +1,128 @@
+.suggestedBody {
+  height: 46.5vh;
+  margin: 0 auto;
+  margin-top: 1vh;
+  margin-bottom: 5vh;
+  width: fit-content;
+  div {
+    text-align: center;
+    position: relative;
+    margin: 1vh;
+  }
+  .swatches {
+    margin: 0;
+    margin-top: 1vh;
+  }
+  .swatch {
+    height: 5vh;
+    width: 5vh;
+    float: left;
+    margin: 0 0.5vh;
+  }
+  > div {
+    float: left;
+  }
+  .neutral {
+    margin: 0;
+    height: 45.5vh;
+  }
+  .femme {
+    height: 45.5vh;
+    margin: 0;
+    margin-left: 8vw;
+  }
+  img {
+    display: inline-block;
+  }
+  .sunhat {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+  .ribbon {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+  }
+  .tentall {
+    height: 10vh;
+    img {
+      max-height: 10vh;
+    }
+    .shoes {
+      margin-left: 1vh;
+    }
+  }
+  .fifteentall {
+    height: 15vh;
+    img {
+      height: 15vh;
+    }
+    .tshirt {
+      margin-left: 1vh;
+    }
+    .purse {
+      margin-left: 1vh;
+    }
+  }
+  .twentyfivetall {
+    height: 25vh;
+    .pantsRow2Col1 {
+      float: left;
+      .tshirt {
+        height: 12vh;
+      }
+      .sweatshirt {
+        margin-top: 1vh;
+        height: 11.5vh;
+        display: block;
+      }
+    }
+    .pantsRow2Col2 {
+      float: left;
+      img {
+        height: 25vh;
+      }
+    }
+    .dressRow2Col1 {
+      float: left;
+      img {
+        height: 25vh;
+      }
+    }
+    .dressRow2Col2 {
+      float: left;
+      .purse {
+        height: 17.5vh;
+      }
+      .fShoes {
+        margin-top: 1vh;
+        max-height: 7.5vh;
+        display: block;
+      }
+    }
+  }
+}
+.neutralPalette {
+  display: inline-block;
+}
+.femmePalette {
+  display: inline-block;
+  margin-left: 12vw;
+}
+.shoes {
+  max-width: 15vh;
+  height: auto;
+}
+.pantsLayout {
+  height: 37.5vh;
+}
+.jacketLayout {
+  height: 37.5vh;
+}
+.dressLayout {
+  height: 37.5vh;
+}
+.skirtLayout {
+  height: 37.5vh;
+}

@@ -1,8 +1,9 @@
 import { PAGE_SET } from "actions/_index";
 import ColorPicker from "components/ColorPicker";
-import ColorPreview from "components/ColorPreview";
+// import ColorPreview from "components/ColorPreview"; // keep for DEBUG purposes in the future
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
 
 // http://jsfiddle.net/thirtydot/9SEMf/869/
 // https://ourcodeworld.com/articles/read/185/how-to-get-the-pixel-color-from-a-canvas-on-click-or-mouse-event-with-javascript
@@ -19,11 +20,7 @@ export default () => {
 
   const renderPicker = () => {
     if (!preview.src) {
-      return (
-        <div className="screen">
-          <h1>Please return to step 1 and select a painting</h1>
-        </div>
-      );
+      return <Navigate to="/workflow/screen1" />;
     } else {
       return (
         <div className="screen">
@@ -35,7 +32,9 @@ export default () => {
               height={preview.height}
             />
             <div className="bar" style={{ backgroundColor: user.color }}></div>
-            {/* <div className="ColorPreview">
+            {/*
+            keep for DEBUG purposes in the future
+            <div className="ColorPreview">
               <div className="ColorPreview__color">
                 <div
                   className="bar"
@@ -43,10 +42,11 @@ export default () => {
                 ></div>
               </div>
               <ColorPreview pickerref={pickerRef} />
-            </div> */}
+            </div>
+            */}
           </div>
           <h2 className="subtitle">
-            We will build your outfit's palette around the color you select.
+            We will build your outfits' palettes around the color you select
           </h2>
         </div>
       );
