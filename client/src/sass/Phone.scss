@@ -4,7 +4,7 @@
   header {
     padding: 10vw;
     padding-top: 10vw;
-    padding-bottom: 7.5vw;
+    padding-bottom: 5vw;
     overflow: auto;
     .logo {
       font-size: 8vw;
@@ -53,10 +53,12 @@
   }
   .phone-neutral {
     margin: 10vw;
+    margin-top: 7.5vw;
     float: left;
   }
   .phone-femme {
     margin: 10vw;
+    margin-top: 7.5vw;
     margin-left: 0vw;
     float: left;
     position: relative;
