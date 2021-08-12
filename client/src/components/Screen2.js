@@ -46,7 +46,7 @@ export default () => {
             */}
           </div>
           <h2 className="subtitle">
-            We will build your outfits' palettes around the color you select
+            We will build your outfits' palettes around the color you select.
           </h2>
         </div>
       );
