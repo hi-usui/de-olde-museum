@@ -1,6 +1,5 @@
 .SidebarTab {
   background-color: $color-light-beige;
-  cursor: pointer;
   color: $color-beige;
   border-bottom: 1px white solid;
   height: 25vh;
@@ -17,5 +16,6 @@
   &.active {
     background-color: $color-teal;
     color: $color-grey-light-1;
+    cursor: pointer;
   }
 }
