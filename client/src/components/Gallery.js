@@ -45,7 +45,7 @@ export default () => {
         <div className="artworks">{renderArtworks("Picasso")}</div>
       </div>
       <div className="page">
-        a<div className="artworks">{renderArtworks("Van Gogh")}</div>
+        <div className="artworks">{renderArtworks("Van Gogh")}</div>
       </div>
       <div className="page">
         <div className="artworks">{renderArtworks("Warhol")}</div>
