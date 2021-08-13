@@ -2,7 +2,7 @@
   width: calc(99vw - 36vh);
   margin: 0 auto;
   white-space: nowrap;
-  overflow: scroll;
+  overflow: hidden;
   scroll-behavior: smooth;
   .page {
     display: inline-block;
