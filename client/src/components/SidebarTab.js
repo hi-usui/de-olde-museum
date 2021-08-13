@@ -8,6 +8,7 @@ export default (props) => {
       <div
         className="SidebarTab active"
         onClick={() => navigate(`/workflow/screen${props.title}`)}
+        key={props.title}
       >
         <h1>{props.title}</h1>
         <h2>{props.subtitle}</h2>
@@ -15,7 +16,7 @@ export default (props) => {
     );
   } else {
     return (
-      <div className="SidebarTab">
+      <div className="SidebarTab" key={props.title}>
         <h1>{props.title}</h1>
         <h2>{props.subtitle}</h2>
       </div>
