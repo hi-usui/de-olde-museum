@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/de-olde-museum/static/css/main.1e5e8fb5.chunk.css",
-    "main.js": "/de-olde-museum/static/js/main.279e4dc1.chunk.js",
-    "main.js.map": "/de-olde-museum/static/js/main.279e4dc1.chunk.js.map",
+    "main.js": "/de-olde-museum/static/js/main.a53c40af.chunk.js",
+    "main.js.map": "/de-olde-museum/static/js/main.a53c40af.chunk.js.map",
     "runtime-main.js": "/de-olde-museum/static/js/runtime-main.e5d777ec.js",
     "runtime-main.js.map": "/de-olde-museum/static/js/runtime-main.e5d777ec.js.map",
     "static/css/2.4b6206d7.chunk.css": "/de-olde-museum/static/css/2.4b6206d7.chunk.css",
-    "static/js/2.8e29d1f1.chunk.js": "/de-olde-museum/static/js/2.8e29d1f1.chunk.js",
-    "static/js/2.8e29d1f1.chunk.js.map": "/de-olde-museum/static/js/2.8e29d1f1.chunk.js.map",
+    "static/js/2.25c9ed2f.chunk.js": "/de-olde-museum/static/js/2.25c9ed2f.chunk.js",
+    "static/js/2.25c9ed2f.chunk.js.map": "/de-olde-museum/static/js/2.25c9ed2f.chunk.js.map",
     "index.html": "/de-olde-museum/index.html",
     "static/css/2.4b6206d7.chunk.css.map": "/de-olde-museum/static/css/2.4b6206d7.chunk.css.map",
     "static/css/main.1e5e8fb5.chunk.css.map": "/de-olde-museum/static/css/main.1e5e8fb5.chunk.css.map",
-    "static/js/2.8e29d1f1.chunk.js.LICENSE.txt": "/de-olde-museum/static/js/2.8e29d1f1.chunk.js.LICENSE.txt",
+    "static/js/2.25c9ed2f.chunk.js.LICENSE.txt": "/de-olde-museum/static/js/2.25c9ed2f.chunk.js.LICENSE.txt",
     "static/media/_index.scss": "/de-olde-museum/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
     "static/media/baseballcap.png": "/de-olde-museum/static/media/baseballcap.2d5e3cbd.png",
     "static/media/beigevans.png": "/de-olde-museum/static/media/beigevans.b9adf2e2.png",
@@ -93,8 +93,8 @@
   "entrypoints": [
     "static/js/runtime-main.e5d777ec.js",
     "static/css/2.4b6206d7.chunk.css",
-    "static/js/2.8e29d1f1.chunk.js",
+    "static/js/2.25c9ed2f.chunk.js",
     "static/css/main.1e5e8fb5.chunk.css",
-    "static/js/main.279e4dc1.chunk.js"
+    "static/js/main.a53c40af.chunk.js"
   ]
 }
