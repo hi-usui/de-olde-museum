@@ -86,7 +86,7 @@ export default () => {
   };
   return (
     <div className="screen">
-      <h1>Scan to save</h1>
+      <h1>Scan to save directions to phone</h1>
       {selectionRender()}
     </div>
   );

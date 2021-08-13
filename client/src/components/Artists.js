@@ -1,5 +1,5 @@
 import { ART_SCROLL_LEFT } from "actions/_index";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 // https://dev.to/fredericrous/minimal-carousel-with-scroll-snap-mobile-mouse-friendly-1dl
@@ -10,9 +10,16 @@ import { useDispatch, useSelector } from "react-redux";
 export default () => {
   const dispatch = useDispatch();
   const artistPos = useSelector((state) => state.art.scrollLeft);
+  const ref = useRef(null);
+
+  const handleClick = (e) => {
+    const slider = ref.current;
+    slider.scrollLeft =
+      e.currentTarget.offsetLeft - e.currentTarget.offsetWidth;
+  };
 
   useEffect(() => {
-    const slider = document.querySelector(".scroll-container");
+    const slider = ref.current;
     let isDown = false;
     let startX;
     let scrollLeft;
@@ -47,26 +54,15 @@ export default () => {
   return (
     <div className="scroll-master">
       <div className="scroll-overlay"></div>
-      {/* <ScrollContainer
-        className="scroll-container"
-        vertical={false}
-        horizontal={true}
-      >
+      <div className="scroll-container" ref={ref}>
         <div></div>
-        <div>Monet</div>
-        <div>O'Keeffe</div>
-        <div>Picasso</div>
-        <div>Warhol</div>
-        <div>Van Gogh</div>
-        <div></div>
-      </ScrollContainer> */}
-      <div className="scroll-container">
-        <div></div>
-        <div className="artist">Monet</div>
-        <div className="artist">O'Keeffe</div>
-        <div className="artist">Picasso</div>
-        <div className="artist">Van Gogh</div>
-        <div className="artist">Warhol</div>
+        {["Monet", "O'Keeffe", "Picasso", "Van Gogh", "Warhol"].map(
+          (artist) => (
+            <div className="artist" key={artist} onClick={handleClick}>
+              {artist}
+            </div>
+          )
+        )}
         <div></div>
       </div>
     </div>

@@ -1,11 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default (props) => {
-  const page = useSelector((state) => state.page);
-  if (page == props.title) {
+  const navigate = useNavigate();
+  if (props.active) {
     return (
-      <div className="SidebarTab active">
+      <div
+        className="SidebarTab active"
+        onClick={() => navigate(`/workflow/screen${props.title}`)}
+      >
         <h1>{props.title}</h1>
         <h2>{props.subtitle}</h2>
       </div>

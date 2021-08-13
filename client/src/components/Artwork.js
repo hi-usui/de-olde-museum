@@ -1,14 +1,13 @@
-import { ART_PREVIEW } from "actions/_index";
+import { ART_PREVIEW, USER_COLOR_SET } from "actions/_index";
 import React, { useRef, useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
-// TO-DO: (Wishlist) If an artpiece is in focus and user clicks outside, unfocus
 
 export default (props) => {
   const { artist, src, title, ...rest } = props;
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const preview = useSelector((state) => state.art.preview);
   const [click, setClick] = useState(false);
 
   const accept = async () => {
@@ -29,6 +28,12 @@ export default (props) => {
         neutralShoes: rest.neutralShoes,
       },
     });
+    if (!preview.title || preview.title != title) {
+      dispatch({
+        type: USER_COLOR_SET,
+        payload: {},
+      });
+    }
     navigate("/workflow/screen2");
   };
   const wrapperRef = useRef(null);
