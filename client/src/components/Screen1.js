@@ -1,7 +1,6 @@
 import { PAGE_SET } from "actions/_index";
 import Collections from "components/Collections";
 import React, { useEffect } from "react";
-import { SketchPicker } from "react-color";
 import { useDispatch } from "react-redux";
 
 export default () => {
