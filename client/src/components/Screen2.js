@@ -24,7 +24,7 @@ export default () => {
     } else {
       return (
         <div className="screen">
-          <h1>Tap inside painting to select color</h1>
+          <h1>Tap or drag inside painting to select color</h1>
           <div className="picker-container">
             <ColorPicker
               canvasRef={pickerRef}
