@@ -1,3 +1,7 @@
+https://kind-snyder-f07c39.netlify.app
+
+note: for the sake of easier Netlify hosting, "server" directory ended up being unused, COMPSCI 160 final class project was pure front-end, so only "client" is used
+
 # de-olde-museum
 
 ## Installation
